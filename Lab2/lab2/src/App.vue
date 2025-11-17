@@ -10,8 +10,8 @@ import HelloWorld from './components/HelloWorld.vue'
 
     <!-- MENU -->
     <nav class="mb-4">
-  <router-link to="/bai1" class="btn nav-btn me-2">Bài 1 - Table</router-link>
-  <router-link to="/bai2" class="btn nav-btn">Bài 2, 3, 4 - Form + Tab</router-link>
+  <router-link to="/bai1" class="btn nav-btn me-2">Bài 1 (Table)</router-link>
+  <router-link to="/bai2" class="btn nav-btn">Bài 2, 3, 4 (Form + Tabs + Modal)</router-link>
 </nav>
 
 
@@ -34,6 +34,11 @@ import HelloWorld from './components/HelloWorld.vue'
   background-color: black !important;
   color: white !important;
   border: 1px solid black !important;
+}
+
+.container {
+  max-width: 1600px !important; 
+  width: 100% !important;
 }
 </style>
 

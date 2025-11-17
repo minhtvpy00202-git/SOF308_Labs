@@ -49,7 +49,6 @@
                   placeholder="Nhập họ và tên"
                   required
                 >
-                <div class="invalid-feedback">Vui lòng điền vào trường này</div>
               </div>
 
               <div class="mb-3">
@@ -61,7 +60,6 @@
                   placeholder="Nhập email"
                   required
                 >
-                <div class="invalid-feedback">Vui lòng điền vào trường này</div>
               </div>
 
               <div class="mb-3">
@@ -73,7 +71,6 @@
                   placeholder="Nhập số điện thoại"
                   required
                 >
-                <div class="invalid-feedback">Vui lòng điền vào trường này</div>
               </div>
 
               <div class="mb-3">
@@ -85,7 +82,6 @@
                   placeholder="Nhập mật khẩu"
                   required
                 >
-                <div class="invalid-feedback">Vui lòng điền vào trường này</div>
               </div>
 
               <div class="mb-3">
@@ -97,7 +93,6 @@
                   placeholder="Nhập lại mật khẩu"
                   required
                 >
-                <div class="invalid-feedback">Vui lòng điền vào trường này</div>
               </div>
 
               <div class="mb-3">
@@ -123,7 +118,6 @@
                   >
                   <label class="form-check-label" for="genderFemale">Nữ</label>
                 </div>
-                <div class="invalid-feedback d-block">Vui lòng chọn giới tính</div>
               </div>
 
               <div class="mb-3">
@@ -133,11 +127,10 @@
                   id="language"
                   required
                 >
-                  <option value="" disabled selected>Tiếng Việt</option>
+                  <option value="" disabled selected>-----Chọn ngôn ngữ-----</option>
                   <option value="vi">Tiếng Việt</option>
                   <option value="en">Tiếng Anh</option>
                 </select>
-                <div class="invalid-feedback">Vui lòng chọn ngôn ngữ</div>
               </div>
 
               <div class="mb-3 form-check">
@@ -150,9 +143,6 @@
                 <label class="form-check-label" for="agree">
                   Tôi đồng ý với các điều khoản và điều kiện
                 </label>
-                <div class="invalid-feedback">
-                  Bạn phải đồng ý trước khi đăng ký
-                </div>
               </div>
 
               <button type="submit" class="btn btn-primary">Đăng ký</button>
@@ -176,7 +166,6 @@
                   placeholder="Nhập email"
                   required
                 >
-                <div class="invalid-feedback">Vui lòng nhập email</div>
               </div>
 
               <div class="mb-3">
@@ -188,7 +177,6 @@
                   placeholder="Nhập mật khẩu"
                   required
                 >
-                <div class="invalid-feedback">Vui lòng nhập mật khẩu</div>
               </div>
 
               <button type="submit" class="btn btn-primary">Đăng nhập</button>
