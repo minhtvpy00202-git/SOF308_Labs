@@ -1,30 +1,28 @@
 <script setup lang="ts">
-import Index from '../src/views/index.vue'
-
+import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
-  <Index />
-  <p> abcd1123</p>
+  <div>
+    <!-- Navbar chính của app -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light px-3">
+      <span class="navbar-brand">Lab3 - Vue</span>
+      <div class="ms-auto">
+        <RouterLink class="btn btn-outline-primary me-2" to="/">Index</RouterLink>
+        <RouterLink class="btn btn-outline-success me-2" to="/post">Post</RouterLink>
+        <RouterLink class="btn btn-outline-info" to="/postdetail">PostDetail</RouterLink>
+      </div>
+    </nav>
+
+    <!-- Nội dung theo từng trang -->
+    <main class="container my-4">
+      <RouterView />
+    </main>
+
+   
+  </div>
 </template>
+
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-
-.carousel-item img {
-  height: 350px !important;
-  width: 1000px;
-}
+/* tuỳ chỉnh nếu cần */
 </style>
