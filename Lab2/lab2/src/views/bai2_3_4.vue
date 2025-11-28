@@ -28,7 +28,7 @@
 
 
   
-    <h1 class="mb-4">Bài 2</h1>
+  
   
   <!-- Tab Panes -->
 
@@ -65,7 +65,7 @@
               <div class="mb-3">
                 <label for="regPhone" class="form-label">Số điện thoại</label>
                 <input
-                  type="text"
+                  type="number"
                   class="form-control"
                   id="regPhone"
                   placeholder="Nhập số điện thoại"

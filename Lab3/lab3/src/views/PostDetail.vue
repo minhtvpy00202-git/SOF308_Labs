@@ -27,136 +27,109 @@ const relatedPosts: RelatedPost[] = [
 </script>
 
 <template>
-  <div class="container">
-    <!-- Navbar -->
+  <div class="page-root container py-4">
     <navbar />
-    <!-- Carousel (có thể coi như banner của bài) -->
     <carousel />
 
     <section class="row mt-4">
-      <!-- Sidebar -->
-      <Sidebar />
+      <article class="col-lg-8 order-1">
+        <h1 class="post-title text-center text-primary mb-3">Phương pháp tập Pilates giúp phục hồi chấn thương cột sống</h1>
 
-      <!-- Nội dung bài viết -->
-      <article class="col-sm-8">
-        <p class="small text-muted mb-1">
-          <span class="badge bg-success me-2">Vue.js</span>
-          20/11/2025 • 10 phút đọc
-        </p>
-
-        <h2 class="text-info mb-3">
-          Từ giao diện Bootstrap tĩnh đến ứng dụng Vue.js trong Lab 3
-        </h2>
+        <div class="hero-img mb-3">
+          <img src="/src/assets/pilates-hero.jpg" alt="pilates" />
+        </div>
 
         <p class="lead text-justify">
-          Ở Lab 3, bạn không chỉ dựng giao diện blog bằng Bootstrap mà còn “nâng cấp”
-          nó lên thành một ứng dụng Vue.js có nhiều trang: <strong>Index, Post và
-          PostDetail</strong>. Điều này giúp bạn làm quen với tư duy component và cách
-          tổ chức layout chuyên nghiệp hơn.
+          Tập Pilates có thể vẫn còn khá xa lạ với người Việt, nhưng tại các nước phương Tây thì đây chính là
+          phương pháp tập thể dục giúp duy trì vóc dáng, tăng cường vững cơ và cải thiện sự linh hoạt, dẻo dai cho
+          người tập. Đặc biệt, các bài tập Pilates còn có khả năng trị đau lưng, là giải pháp hữu hiệu để phục hồi
+          chấn thương cột sống. Sau đây hãy cùng tìm hiểu các phương pháp tập luyện này giúp phục hồi chấn thương
+          cột sống nhanh chóng nhé!
+        </p>
+
+        <h4 class="mt-4">Pilates giúp phục hồi chấn thương cột sống nhanh chóng</h4>
+        <p class="text-justify">
+          Một trong những căn bệnh ngày càng phổ biến, đặc biệt là dân văn phòng, đó là đau lưng, thoát vị đĩa đệm.
+          Tuy nhiên, nếu điều trị không đúng cách có thể dẫn đến nhiều biến chứng nguy hiểm, bao gồm: VI dụ, điều trị
+          bằng laser không đúng cách hoặc tập yoga không đúng cách có thể khiến bệnh nhân nằm liệt giường.
+        </p>
+
+        <div class="inline-img mb-3">
+          <img src="/src/assets/pilates-2.jpg" alt="pilates-2" />
+        </div>
+
+        <h5 class="mt-3">Phương pháp tập Pilates Cat Cow</h5>
+        <p class="text-justify">Các bước thực hiện :</p>
+        <ul>
+          <li>Bắt đầu với tư thế 4 điểm. Vai và cổ tay của bạn phải thẳng hàng và vuông góc với thảm, lưng của bạn phải bằng phẳng và xương chậu của bạn phải cân đối.</li>
+          <li>Hít vào, vồng lưng, nâng cằm lên, mở rộng ngực.</li>
+          <li>Thở ra, cong xương cụt, nâng cong lưng và đưa cằm về gần khoang ngực.</li>
+          <li>Lặp đi lặp lại động tác từ 5-7 lần.</li>
+        </ul>
+
+        <h4 class="mt-3">Lời kết</h4>
+        <p class="text-justify">
+          Trên đây là phương pháp tập Pilates giúp phục hồi chấn thương cột sống nhanh chóng. Để đạt được kết quả
+          tập luyện như mong muốn, bạn cần duy trì chế độ tập luyện đều đặn, thực hiện đúng động tác, kết hợp cùng chế
+          độ ăn uống khoa học.
         </p>
 
         <hr />
 
-        <h4 class="mb-2">1. Giữ giao diện cũ nhưng nâng cấp công nghệ</h4>
-        <p class="text-justify">
-          Thay vì code lại toàn bộ, bạn có thể tái sử dụng hầu hết HTML và class Bootstrap
-          từ bài Lab dùng HTML thuần. Công việc chính là:
-        </p>
-        <ul>
-          <li>Đưa từng phần (navbar, carousel, sidebar, footer) vào các component riêng.</li>
-          <li>Dùng <code>&lt;script setup&gt;</code> để code gọn và dễ hiểu.</li>
-          <li>Chuẩn hoá cấu trúc thư mục: <code>components/</code> và <code>views/</code>.</li>
-        </ul>
-
-        <h4 class="mt-3 mb-2">2. Tổ chức 3 trang: Index, Post, PostDetail</h4>
-        <p class="text-justify">
-          <strong>Index</strong> là trang giới thiệu, hiển thị blog, video nổi bật.  
-          <strong>Post</strong> là nơi liệt kê toàn bộ bài viết với ô tìm kiếm, badge mức độ học,
-          số bình luận.  
-          <strong>PostDetail</strong> chính là trang bạn đang xem – tập trung mô tả chi tiết
-          một chủ đề, ví dụ: cách chuyển giao diện Bootstrap sang Vue.
-        </p>
-
-        <ol>
-          <li>
-            <strong>Index.vue</strong>: tập trung phần giới thiệu, blog nổi bật và video.
-          </li>
-          <li>
-            <strong>Post.vue</strong>: danh sách bài viết, có thể sau này nối với API thật.
-          </li>
-          <li>
-            <strong>PostDetail.vue</strong>: nội dung dài, thêm bình luận và bài viết liên quan.
-          </li>
-        </ol>
-
-        <h4 class="mt-3 mb-2">3. Gợi ý mở rộng cho bạn</h4>
-        <p class="text-justify">
-          Sau khi hoàn thành đúng yêu cầu Lab, bạn có thể thử:
-        </p>
-        <ul>
-          <li>Thêm router để chuyển trang mượt mà giữa Index, Post và PostDetail.</li>
-          <li>Lưu danh sách bài viết vào một file JSON hoặc gọi API nhỏ từ backend Java.</li>
-          <li>Thêm bộ lọc theo <em>category</em> hoặc <em>level</em> (Cơ bản, Trung cấp, Nâng cao).</li>
-        </ul>
-
-        <div class="alert alert-info mt-3">
-          <strong>Tip nhỏ:</strong> Mỗi khi hoàn thành một phần (Navbar, Carousel, Sidebar),
-          hãy commit lên Git. Sau này nếu sửa hư, bạn quay lại rất dễ.
-        </div>
-
-        <!-- Form bình luận -->
-        <hr class="mt-4" />
-        <h5 class="mb-3">Bình luận</h5>
-        <div class="mb-3">
-          <label class="form-label">Tên của bạn</label>
-          <input type="text" class="form-control" placeholder="Nhập tên..." />
-        </div>
-        <div class="mb-3">
-          <label class="form-label">Nội dung bình luận</label>
-          <textarea
-            class="form-control"
-            rows="3"
-            placeholder="Hãy chia sẻ cảm nhận hoặc thắc mắc của bạn về bài viết này..."
-          ></textarea>
-        </div>
-        <button class="btn btn-primary mb-4">
-          <i class="fa-solid fa-paper-plane me-1"></i> Gửi bình luận
-        </button>
+        
 
         <!-- Bài viết liên quan -->
-        <hr />
         <h5 class="mb-3">Bài viết liên quan</h5>
         <div class="row g-3">
           <div class="col-md-6" v-for="rel in relatedPosts" :key="rel.title">
             <div class="card h-100">
-              <img
-                :src="rel.thumbnail"
-                class="card-img-top"
-                style="height: 140px; object-fit: cover"
-                alt="related"
-              />
+              <img :src="rel.thumbnail" class="card-img-top" style="height:140px; object-fit:cover" alt="related" />
               <div class="card-body">
                 <h6 class="card-title">{{ rel.title }}</h6>
-                <p class="card-text small text-muted text-justify">
-                  {{ rel.excerpt }}
-                </p>
-                <a href="#" class="small text-decoration-none">
-                  Đọc tiếp →
-                </a>
+                <p class="card-text small text-muted text-justify">{{ rel.excerpt }}</p>
+                <a href="#" class="small text-decoration-none">Đọc tiếp →</a>
               </div>
             </div>
           </div>
         </div>
       </article>
+
+      <aside class="col-lg-4 order-2">
+        <div class="sticky-top" style="top:90px">
+          <div class="card p-3 mb-3">
+            <h6 class="mb-2">Bình luận ngay</h6>
+            <input type="text" class="form-control mb-2" placeholder="Tên" />
+            <textarea class="form-control mb-2" rows="3" placeholder="Nội dung..."></textarea>
+            <button class="btn btn-success w-100">Gửi</button>
+          </div>
+
+          <div class="card p-3 mb-3">
+            <h6 class="mb-2">Danh sách các bình luận</h6>
+            <ul class="list-unstyled mb-0">
+              <li class="mb-2"><strong>Bình An</strong><div class="small text-muted">Bình luận rất hữu ích</div></li>
+              <li><strong>Binh An</strong><div class="small text-muted">Cảm ơn những chia sẻ bổ ích</div></li>
+            </ul>
+          </div>
+
+          <div class="card p-3">
+            <h6 class="mb-2">Tìm kiếm</h6>
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Tìm bài viết..." />
+              <button class="btn btn-outline-secondary">Tìm</button>
+            </div>
+          </div>
+        </div>
+      </aside>
     </section>
 
-    <!-- Footer -->
     <foot />
   </div>
 </template>
 
 <style scoped>
-.text-justify {
-  text-align: justify;
-}
+.post-title { font-size: 1.8rem; font-weight: 700; }
+.hero-img img { width:100%; height:360px; object-fit:cover; border-radius:6px; }
+.inline-img img { width:100%; height:240px; object-fit:cover; border-radius:4px }
+.text-justify { text-align: justify; }
+@media (max-width:767px) { .hero-img img { height:220px } }
 </style>

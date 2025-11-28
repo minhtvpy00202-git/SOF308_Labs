@@ -1,5 +1,5 @@
 <template>
-    <div class="container mt-5">
+    <div class="container mt-3">
         <h1 class="text-center">Kiến thức sức khỏe cộng đồng</h1>
         <div class="row">
             <div class="col-sm-4">
